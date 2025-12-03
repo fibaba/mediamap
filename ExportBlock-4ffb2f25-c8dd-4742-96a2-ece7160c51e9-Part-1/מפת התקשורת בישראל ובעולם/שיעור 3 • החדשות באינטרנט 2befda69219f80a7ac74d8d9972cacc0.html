@@ -1,0 +1,714 @@
+<html lang="he-IL" dir="rtl"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>שיעור 3 • החדשות באינטרנט</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2befda69-219f-80a7-ac74-d8d9972cacc0" class="page sans"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://www.notion.so/icons/wifi_orange.svg"/></div><h1 class="page-title" dir="auto">שיעור 3 • <strong>החדשות באינטרנט</strong></h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="2befda69-219f-806f-99af-c526dfa6845e" class="">העיתונות המקוונת נמצאת בין הגשמת חלום הטכנולוגיה לבין האיומים על הישרדותה: אלגוריתמים מציעים דרכים חדשות לספר סיפורים, אך במקביל הם מכרסמים בערך העיתונאי המסורתי. בשיעור הזה נקרא את מפת התקשורת המשתנה - החל מפרדוקס החדשנות באתרי החדשות, דרך מודלי ההכנסה החדשים, עלייתה של העיתונות האזרחית, וכלה במצב בו אתרי החדשות הפכו למכונות קליקים.</p></div><div style="display:contents" dir="auto"><h1 id="2befda69-219f-8067-8ebd-d1c566257830" class="">מבוא</h1></div><div style="display:contents" dir="auto"><h2 id="2befda69-219f-807d-bad6-cd915110a4f0" class="">ארבעה רגעי מפתח בהיסטוריה של החדשות בדיגיטל</h2></div><div style="display:contents" dir="auto"><p id="2befda69-219f-8022-b430-eb28cd104fa7" class="">ארבעה רגעי מפתח בהיסטוריה של החדשות בדיגיטל משקפים את האופן שבו העיתונות השתנתה עם המעבר לזירה המקוונת.    </p></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">29/04/1996 • הוול סטריט ג׳ורנל מפעיל לראשונה חומת תשלום (paywall)  </summary><div class="indented"><div style="display:contents" dir="auto"><p id="2befda69-219f-8080-a6ca-ee1f24125ded" class="">ב-29 באפריל 1996 הפך הוול סטריט ג׳ורנל לעיתון הראשון שהפעיל חומת תשלום, מהלך שסימן שינוי משמעותי במודל הכלכלי של החדשות באינטרנט והעלה לדיון את השאלה האם תוכן עיתונאי צריך להיות נגיש בחינם או בתשלום.</p></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">01/02/2003 • הדיווח המוטעה של ynet על שובו בשלום של אילן רמון  </summary><div class="indented"><div style="display:contents" dir="auto"><p id="2befda69-219f-8054-a64c-ff07bdef92dd" class="">ב-1 בפברואר 2003 התרחש אחד מכשלי הדיווח הבולטים בעידן הדיגיטלי, כאשר אתר ynet פרסם בטעות כי אילן רמון שב בשלום ממשימת החלל, בעוד שמעבורת קולומביה התפרקה עם חזרתה לאטמוספירה.</p></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">20/12/2012 • סיפור זוכה פרס פוליצר של הניו יורק טיימס על מפולת שלגים 10 חודשים קודם – 3 הרוגים ופצוע אחד  </summary><div class="indented"><div style="display:contents" dir="auto"><p id="2befda69-219f-80d2-bf34-dbce214d8c0d" class="">ב-20 בדצמבר 2012 פרסם הניו יורק טיימס תחקיר מעמיק על מפולת שלגים קטלנית שאירעה עשרה חודשים קודם לכן, בה נהרגו שלושה בני אדם ונפצע גולש נוסף. הכתבה, שזכתה בפרס פוליצר, שילבה נרטיב עיתונאי עם כלים דיגיטליים חדשניים, וקבעה סטנדרט חדש לסיפורים מולטימודליים ואימרסיביים. המקרה הדגים את הסיכון שבמהירות הדיווח בדיגיטל על חשבון בדיקת העובדות.</p></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">24/03/2014 • דו״ח החדשנות של הניו יורק טיימס ובו הביטוי המהפכני Digital First</summary><div class="indented"><div style="display:contents" dir="auto"><p id="2befda69-219f-8061-bb46-f13a7eb51a56" class="">ב-24 במרץ 2014 פרסם הניו יורק טיימס את דו״ח החדשנות שלו, בו הופיע המונח המהפכני Digital First. הדו״ח הצביע על הצורך בהתאמה מלאה של גופי תקשורת לעידן הדיגיטלי, תוך העדפת הפלטפורמות המקוונות על פני הפרינט. כל אחד מהרגעים הללו מתאר נקודת מפנה בעיתונות הדיגיטלית, בין אם במודל הכלכלי, בדיוק הדיווח, בשימוש בטכנולוגיות חדשות או בגישה האסטרטגית של כלי התקשורת.  </p></div></div></details></div><div style="display:contents" dir="auto"><h2 id="2befda69-219f-80db-b24c-c6849aa4689f" class="">האבולוציה של החדשות באינטרנט: סדרה של מהפכות</h2></div><div style="display:contents" dir="auto"><p id="2befda69-219f-80d8-beed-d9116f20412f" class="">החדשות באינטרנט עברו מהפכות משמעותיות, כאשר כל תקופה מאופיינת במעבר טכנולוגי ושינוי בגישות ליצירת והפצת תוכן. השינויים בתעשיית המדיה והשינויים באסטרטגיות התוכן קשורים זה בזה: כל מהפכה טכנולוגית טומנת בחובה התאמות חדשות בדרכים בהן התוכן נוצר, מופץ ונצרך. המעבר ממדיה מסורתית לדיגיטל, מהפצת תוכן ממוקדת לאתר האינטרנט לתוכן מבוזר ומונחה אלגוריתמים, מעיד על כך שהמדיה הדיגיטלית היא שדה מתפתח ולא פחות מאשר גם מרחב אסטרטגי בו ארגונים ויוצרים מתמודדים עם השלכות והשפעות כלכליות, פוליטיות ותרבותיות.</p></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">העידן ההשתתפותי (שנות ה-90 עד ראשית ה-2000)</summary><div class="indented"><div style="display:contents" dir="auto"><ul id="2befda69-219f-8064-8f1e-d60cad51f66c" class="bulleted-list"><li style="list-style-type:disc">תקופה אופטימיסטית, רבים סוברים כי מדובר בכיכר השוק החדשה; עיתונות האזרחים ההשתתפותית עולה לראשונה. </li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-8076-8ea6-c7bdcc0b9496" class="bulleted-list"><li style="list-style-type:disc">התוכן הועבר לרשת בשיטת Shovelware, בהצגת הידיעות והפריטים מהמהדורה המודפסת כפי שהן באינטרנט, ללא כל התאמה נוספת, תוך ניצול ראשוני של יתרונות המדיום.</li></ul></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">עידן המעבר (2000 עד 2010)</summary><div class="indented"><div style="display:contents" dir="auto"><ul id="2befda69-219f-80f1-92cb-c484a2ab0c29" class="bulleted-list"><li style="list-style-type:disc">ארגוני מדיה התאימו את עצמם לדיגיטל באמצעות גישות כמו Online First ו-Mobile First שהתמקדו בפרסום תוכן מותאם לפלטפורמות דיגיטליות ומובייל. </li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-804e-8c00-e1ef0e2bce82" class="bulleted-list"><li style="list-style-type:disc">עם עליית עידן הפלטפורמות, ענקיות כמו גוגל ופייסבוק שינו את האופן שבו תוכן מופץ ונצרך.</li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-80b5-9c49-f8b5aa93ec3e" class="bulleted-list"><li style="list-style-type:disc">כלי ניתוח נתונים והפצה מבוזרת הפכו לעקרונות חיוניים להצלחה, כאשר תכנים מסוימים אף נועדו להופיע ישירות ברשתות החברתיות.</li></ul></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">עידן המעבר (2000 עד 2010) ועידן הפלטפורמות (2010 עד 2020)</summary><div class="indented"><div style="display:contents" dir="auto"><ul id="2befda69-219f-8089-8a84-ff2f8238b3a7" class="bulleted-list"><li style="list-style-type:disc">ארגוני מדיה התאימו את עצמם לדיגיטל באמצעות גישות כמו Online First ו-Mobile First שהתמקדו בפרסום תוכן מותאם לפלטפורמות דיגיטליות ומובייל. </li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-8036-917f-efc1efb668f0" class="bulleted-list"><li style="list-style-type:disc">עם עליית עידן הפלטפורמות, ענקיות כמו גוגל ופייסבוק שינו את האופן שבו תוכן מופץ ונצרך.</li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-8014-9026-c9dd5901c1ea" class="bulleted-list"><li style="list-style-type:disc">כלי ניתוח נתונים והפצה מבוזרת הפכו לעקרונות חיוניים להצלחה, כאשר תכנים מסוימים אף נועדו להופיע ישירות ברשתות החברתיות.</li></ul></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">העידן הפופוליסטי (מ-2020)</summary><div class="indented"><div style="display:contents" dir="auto"><ul id="2befda69-219f-8087-8adf-e5f979bd01e7" class="bulleted-list"><li style="list-style-type:disc">העידן הפופוליסטי התאפיין בפוליטיזציה של המידע, שימוש באלגוריתמים לקידום תכנים מפלגים, והגברת הוויזואליזציה והאודיו כדרכים להגביר מעורבות רגשית והשפעה. </li></ul></div></div></details></div><div style="display:contents" dir="auto"><p id="2befda69-219f-8033-9c30-c28d03f21c69" class="">    </p></div><div style="display:contents" dir="auto"><h2 id="2befda69-219f-809e-93ef-fa30d0522cc4" class="">החדשות המקוונות בשורה של צמתים</h2></div><div style="display:contents" dir="auto"><p id="2befda69-219f-80b1-9e42-df7d6118e92c" class=""><strong>מדיום בן שלושה עשורים על פרשת דרכים</strong></p></div><div style="display:contents" dir="rtl"><figure id="2befda69-219f-8071-8fc8-c38403e54c41" class="image"><a href="%D7%A9%D7%99%D7%A2%D7%95%D7%A8%203%20%E2%80%A2%20%D7%94%D7%97%D7%93%D7%A9%D7%95%D7%AA%20%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98/image.png"><img style="width:709.984375px" src="%D7%A9%D7%99%D7%A2%D7%95%D7%A8%203%20%E2%80%A2%20%D7%94%D7%97%D7%93%D7%A9%D7%95%D7%AA%20%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98/image.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="2befda69-219f-8085-a309-eca342042024" class="">בעבר, אך ורק העיתונאים שלטו בנרטיב החדשותי והיו מופקדים על אופן ההגשה, החל מההיבטים החזותיים וכלה בבחירת המילים. עם כניסת האלגוריתמים לזירה, הפכו הקוראים לבעלי השפעה גדולה יותר על התוכן, והעיתונות החלה להסתמך על ניתוח נתונים ושיפוט המידע בהתאם לביצועי הכתבות. המודל הכלכלי השתנה ממימון מסורתי של פרסומות למודל מאוזן יותר בין הכנסות מפרסום להכנסות ממנויים, כאשר חלק מהתוכן מוגש בחינם והשאר בתשלום.  בנוסף, הצריכה הדיגיטלית השתנתה משמעותית וכעת היא מנגישה מידע, ידע ותחקירים נושאיים, עם דגש על מעורבות הקוראים. הדו-שיח בין החדשות לקהל הפך למשמעותי יותר, כאשר ניתוח הנתונים משפיע על האופן שבו סיפורים מוצגים ומקודמים.  </p></div><div style="display:contents" dir="auto"><h2 id="2befda69-219f-8005-8198-ed5e9d2b4da0" class="">פרדוקס החדשנות באתרי החדשות</h2></div><div style="display:contents" dir="auto"><h3 id="2befda69-219f-80cb-9daf-d65a0404481a" class="">ההתנגשות שבין שמרנות לבין חדשנות בתוכן החדשותי</h3></div><div style="display:contents" dir="auto"><p id="2befda69-219f-80a2-bd54-dae5dd4c11df" class=""><strong>שמרנות</strong> מתאפיינת בתוכן שלרוב הוא קצר, לא מתעדכן תדיר, ומורכב מטקסטים, צילומים ומעט וידאו. תוכן זה מבוסס על פורמטים ותבניות מוכרות, שנמצאו יעילים לאורך זמן, ונשארים חלק מרכזי מהחדשות.</p></div><div style="display:contents" dir="auto"><p id="2befda69-219f-802a-b0b2-d29a494ffef3" class=""><strong>חדשנות</strong> מתבטאת בשפע של אפשרויות חדשות לעיצוב והגשה של תוכן חדשותי, לרבות דרכים חדשות לספר סיפור, עדכונים מהירים, מולטימדיה מתקדמת (וידאו, אינפוגרפיקה, דאטה, ויזואליזציות, מציאות מדומה ועוד). חידושים אלו מאפשרים גיוון ושיפור בחוויית הצריכה של המשתמשים.</p></div><div style="display:contents" dir="rtl"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2befda69-219f-8054-be9f-e91688dfb5c1"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/thought-dialogue_orange.svg"/></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="2befda69-219f-803e-b596-f50613363cc3" class=""><strong>מדוע למרות שפע האפשרויות החדשות אנו עדיין חשופים לתוכן שמרני יחסית?</strong></p></div><div style="display:contents" dir="auto"><p id="2befda69-219f-806e-b737-f571d3021fb2" class="">הומפרכט ואסר (Humprecht &amp; Esser, 2018) טוענים במאמרם כי רק שליש מהאתרים מיישמים באופן מלא את שלוש ההבטחות של החדשנות: הגדלת שקיפות, הגדלת ההבנה בקרב הציבור והגברת הדיון הציבורי באמצעות פורומים וקהילות. המשמעות היא שרוב האתרים נותרו שמרניים.</p></div><div style="display:contents" dir="auto"><p id="2befda69-219f-80ed-8db3-e2d3238bf4ff" class="">הסיבות לכך כוללות שיקולי מסחר ויקרות הפיתוח, כמו גם חוסר במערכות תמיכה מתקדמות. גם קוצר ראייה ומגבלות תקציב משפיעים על הנטייה לשמרנות. כמו כן, ישנם חסמים טכניים (כגון דפוסי צריכה רוטיניים וכניסה ארוכה לתוכן חדש) ואוריינטציה תעשייתית שמעדיפה לשמר פורמטים מוכרים, לצד קשיים בשבירת הרגלי הצריכה הישנים של הקהל.</p></div></div></figure></div><div style="display:contents" dir="auto"><p id="2befda69-219f-805a-ac27-d67956c7c2d4" class="">חרף הפוטנציאל הרחב של חדשנות טכנולוגית ועיצובית בחדשות, אנו עדים לשמרנות בשל מגבלות כלכליות, טכניות, ותרבותיות. השינוי הדרגתי וטעון במאמצים כדי להביא לאיזון חדש בין שמרנות לחדשנות, שיאפשר לספק תוכן עשיר, מגוון, ומעורב יותר לצרכנים.</p></div><div style="display:contents" dir="auto"><h2 id="2befda69-219f-80cc-98e2-c0e373b20c12" class="">חדשנות בעיתונות: סוגים, מגמות וטכנולוגיות</h2></div><div style="display:contents" dir="auto"><p id="2befda69-219f-80b7-a949-f0e3dfc1b36a" class="">החדשנות בעיתונות מתבטאת בסוגים חדשים של עיתונאות, מגמות מתפתחות וטכנולוגיות פורצות דרך, אשר משפיעות על הדרך בה אנו צורכים ומפיצים מידע.   </p></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">סוגים חדשים של עיתונות</summary><div class="indented"><div style="display:contents" dir="auto"><ul id="2befda69-219f-8077-a9ae-f5dc5a1cf510" class="toggle"><li><details open=""><summary>עיתונות אזרחים</summary><div style="display:contents" dir="auto"><p id="2befda69-219f-8088-ae9e-d6b10c068cb1" class="">כל אדם יכול לשמש כעיתונאי ולספק תכנים חדשותיים מהשטח.</p></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-8098-bc6a-d12dc37aeeb6" class="toggle"><li><details open=""><summary>עיתונות דאטה</summary><div style="display:contents" dir="auto"><p id="2befda69-219f-8089-932d-d32cb01ea1f4" class="">מתמקדת בניתוח נתונים על מנת להציג מידע באופן ברור וממוקד.</p></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-80cd-aec2-f7573f2ac527" class="toggle"><li><details open=""><summary>עיתונות מולטימדיה</summary><div style="display:contents" dir="auto"><p id="2befda69-219f-8032-bb07-d6507814e75b" class="">משלבת תמונות, וידאו וצלילים כדי להעשיר את החוויה החדשותית. </p></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-809b-880f-fc52155ba681" class="toggle"><li><details open=""><summary>עיתונות קוד פתוח</summary><div style="display:contents" dir="auto"><p id="2befda69-219f-8081-b412-fd89e4aaaf76" class="">עיתונות קוד פתוח מאפשרת גישה חופשית לתוכן ולעיתים גם לשיטות עבודה או כלים טכנולוגיים ובכך היא מקדמת שקיפות ושיתוף פעולה.</p></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-8065-acc6-e42323cad3b7" class="toggle"><li><details open=""><summary>עיתונות איטית</summary><div style="display:contents" dir="auto"><p id="2befda69-219f-8060-8e20-fc31d2d8fd50" class="">עיתונות איטית שואפת להעמיק בניתוח ובדיקת פרטים לעומת עיתונות מהירה.</p></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-80bd-8aa2-e382a3966479" class="toggle"><li><details open=""><summary>עיתונות פתרונות</summary><div style="display:contents" dir="auto"><p id="2befda69-219f-8007-af3d-c76e2011dc6a" class="">מציעה דרכים מעשיות לפתרון בעיות בתחומים שונים. </p></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-80e1-ac9b-dfc25f0026fc" class="toggle"><li><details open=""><summary>פודקאסטים</summary><div style="display:contents" dir="auto"><p id="2befda69-219f-802e-8777-f5e1567fbc63" class="">הפופולריות של הפודקאסטים נסקה בשנים האחרונות ואפשרה לצרכנים להאזין לחדשות ותכנים בצורה גמישה ונגישה.</p></div></details></li></ul></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">מגמות חדשות</summary><div class="indented"><div style="display:contents" dir="auto"><ul id="2befda69-219f-80fc-8789-d76064f98acd" class="toggle"><li><details open=""><summary>פרסום פרוגרמטי</summary><div style="display:contents" dir="auto"><p id="2befda69-219f-80f0-be25-c45a539380c2" class="">בפרסום הפרוגרמטי מודעות מותאמות אישית מופיעות על סמך נתוני המשתמשים.</p></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-80f9-b39d-d5f840ff7fd7" class="toggle"><li><details open=""><summary>בדיקת עובדות</summary><div style="display:contents" dir="auto"><p id="2befda69-219f-804b-9d1e-efccf1c36531" class="">תחום בדיקת העובדות מזכה את העיתונאים בתפקיד חשוב בהבטחת אמינות המידע.</p></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-80ba-a4ab-ef218bd59dd7" class="toggle"><li><details open=""><summary>לידתה המחודשת של עיתונות התחקיר</summary><div style="display:contents" dir="auto"><p id="2befda69-219f-80a1-87c6-fe4bd6556adf" class="">לידתה המחודשת של עיתונות התחקיר תורמת לידיעות על אודות נושאים שעד כה לא היו נחשפים.</p></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-8025-94fd-cec0a5953f9b" class="toggle"><li><details open=""><summary>היפרלינקים</summary><div style="display:contents" dir="auto"><p id="2befda69-219f-80ba-9d9f-e54a90c1a6a3" class="">השימוש בהיפרלינקים מאפשר קישור למידע נוסף באופן שמעשיר את החוויה הוויזואלית והמידעית. </p></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-8098-90f4-efcedabcafe2" class="toggle"><li><details open=""><summary>גיבורות חדשות בחדר החדשות</summary><div style="display:contents" dir="auto"><p id="2befda69-219f-8013-8c89-c5384b35e7b7" class="">הגיבורות החדשות בחדרי החדשות כוללות אנשי מקצוע חדשים כמו מתכנתות ומנתחות נתונים, המובילות את המהפכה הטכנולוגית בעיתונות. </p></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-8032-97dd-caf714f7796e" class="toggle"><li><details open=""><summary>פרסונליזציה</summary><div style="display:contents" dir="auto"><p id="2befda69-219f-80a6-8149-f7b2f911304d" class="">מגמת הפרסונליזציה, שמשמעה התאמה אישית של תוכן למשתמש, הופכת את חוויית הצריכה לייחודית יותר וממוקדת.</p></div></details></li></ul></div></div></details></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">טכנולוגיות חדשות</summary><div class="indented"><div style="display:contents" dir="auto"><ul id="2befda69-219f-8082-b1e8-c91a60b5adb9" class="toggle"><li><details open=""><summary>עיתונות 360</summary><div style="display:contents" dir="auto"><p id="2befda69-219f-8036-958d-ea602bc1dc91" class="">מצלמות 360 מאפשרות צריכת חדשות בסביבה תלת-ממדית.</p></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-80f0-879a-d3bcd3879173" class="toggle"><li><details open=""><summary>עיתונות AR ו-VR</summary><div style="display:contents" dir="auto"><p id="2befda69-219f-80bb-bb9b-ebdf2ed70393" class="">סוגי עיתונות אלה מעשירים את התוכן ומביאות את הקוראים קרוב יותר לאירועים.</p></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-8078-bf84-e77273d83004" class="toggle"><li><details open=""><summary>רחפנים</summary><div style="display:contents" dir="auto"><p id="2befda69-219f-80e5-99da-c2d4e8a0446c" class="">השימוש ברחפנים לתיעוד בשטח מאפשר לעיתונאים גישה למקומות שהיו קשים או מורכבים לגישה.</p></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-805a-8505-c821a7286048" class="toggle"><li><details open=""><summary>בינה מלאכותית</summary><div style="display:contents" dir="auto"><p id="2befda69-219f-8050-9bff-e7457bdea0c0" class="">השימוש בבינה מלאכותית (AI) מאפשר אוטומציה של תהליכים כמו ניתוח נתונים, יצירת תוכן ובדיקת עובדות.</p></div></details></li></ul></div></div></details></div><div style="display:contents" dir="auto"><h1 id="2befda69-219f-80c1-852b-d55b02706531" class="">תמורות ואתגרים</h1></div><div style="display:contents" dir="auto"><h3 id="2befda69-219f-805d-b5e4-e3dc1b977814" class="">לידתו המחודשת של התחקיר העיתונאי</h3></div><div style="display:contents" dir="auto"><p id="2befda69-219f-80ed-80b5-f35f4c8c1021" class="">עיתונות התחקיר חוותה לידת מחודשת בעידן הדיגיטלי עם הקמת האיגוד הבינלאומי של כתבי התחקיר (ICIJ) שמחבר עיתונאים ברחבי העולם לשיתוף פעולה בפרויקטי תחקיר חובקי עולם. דוגמה מובהקת לכך היא חשיפת מסמכי פנמה ב-2016 שחשפה פרשות פיננסיות בינלאומיות (ראו הרחבה בהמשך). כיום, תחקירים נערכים לעתים בצוותים גדולים בכלי התקשורת או באמצעות מודל התחקיר המסובסד של פרופובליקה, המפיק תחקירים מתרומות פרטיות ומשתף פעולה עם כלי תקשורת מרכזיים במטרה לפרסמם. בנוסף, הפרסונליזציה והלוקליזציה של נתונים מאפשרות להתאים את התוכן לקהלים שונים באופן ממוקד ורלוונטי.  </p></div><div style="display:contents" dir="rtl"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2befda69-219f-8088-84a9-c312c2bf7e79"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/library_orange.svg"/></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="2befda69-219f-804c-b0d2-f9636ddf946d" class=""><strong>הארגון הבינלאומי של כתבי התחקיר (ICIJ)</strong></p></div><div style="display:contents" dir="auto"><p id="2befda69-219f-8063-a667-cdec94e1de6f" class="">נוסד ב-199,. מדובר בארגון ללא מטרות רווח הפועל ביותר מ-100 מדינות. האיגוד מתמקד בשחיתות, פשיעה כלכלית וזכויות אדם, ודוגל בשיתוף פעולה בין עיתונאים, כתבים ומדליפים ברחבי העולם. האיגוד מקדם שימוש בטכנולוגיות מתקדמות לניתוח מסמכים ומידע, ומסייע בחשיפת פרשיות משמעותיות שהובילו להתפטרות בכירים ולרפורמות כלכליות. הארגון זכה בפרסים רבים והשפעתו ניכרת בשינויים בחקיקה, ולעתים גם בהשפעה על חקירות פליליות.  </p></div></div></figure></div><div style="display:contents" dir="auto"><h3 id="2befda69-219f-806d-b9dc-d819f7db2b1a" class="">מסמכי פנמה</h3></div><div style="display:contents" dir="rtl"><figure id="2befda69-219f-80ba-9e62-de099342b600" class="image"><a href="%D7%A9%D7%99%D7%A2%D7%95%D7%A8%203%20%E2%80%A2%20%D7%94%D7%97%D7%93%D7%A9%D7%95%D7%AA%20%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98/image%201.png"><img style="width:709.984375px" src="%D7%A9%D7%99%D7%A2%D7%95%D7%A8%203%20%E2%80%A2%20%D7%94%D7%97%D7%93%D7%A9%D7%95%D7%AA%20%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98/image%201.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="2befda69-219f-8006-b947-cec6336e8d74" class="">מסמכי פנמה (2016) נחשפו במסגרת תחקיר חסר תקדים שערך האיגוד הבינלאומי של כתבי התחקיר, בו נותחו מעל 11 מיליון מסמכים שהודלפו ממשרד עורכי הדין ״מוסאק פונסקה״. המסמכים חשפו כיצד אנשי עסקים, פוליטיקאים ודמויות ציבוריות ניצלו חברות קש בכדי להלבין כספים ולהימנע מתשלום מיסים. פרסום התחקיר היווה גורם לטלטלה פוליטית וכלכלית ברחבי העולם. בין השאר, ראש ממשלת איסלנד, קארי יוהאנסון, התפטר לאחר שנחשפו קשרים בינו לבין חברות קש. בנוסף, דמויות בולטות כמו וולדימיר פוטין ודיויד קמרון ספגו ביקורת ציבורית קשה בעקבות הגילויים. אלפי עיתונאים ברחבי העולם שיתפו פעולה בעבודת ניתוח המסמכים ובכך הפכו את התחקיר לפרויקט בינלאומי בקנה מידה עצום, בהיותו בעל השפעה רבה על המערכות הפוליטיות והכלכלה הבינלאומית.  </p></div><div style="display:contents" dir="auto"><h3 id="2befda69-219f-80bb-9123-cb6b315d0e69" class="">תחקירי ענק ופרויקטים</h3></div><div style="display:contents" dir="auto"><p id="2befda69-219f-80b8-8c01-f41990f60016" class="">תחקירי ענק ופרויקטים עיתונאיים מעמיקים הופכים להיות חלק מרכזי בעיתונאות המודרנית, כשמערכות חדשות גדולות ממשיכות להוביל את התחום. כלי תקשורת כמו הניו יורק טיימס, וושינגטון פוסט, BBC, וול סטריט ג׳ורנל ועוד עושים שימוש במשאבים רבים ובצוותים גדולים במטרה לחשוף סיפורים ופרשות העוסקות בנושאים שונים.</p></div><div style="display:contents" dir="rtl"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2befda69-219f-8032-b385-f985d032de94"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/conceal_orange.svg"/></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="2befda69-219f-809c-8ebb-eade77b435a0" class=""><strong>תחקיר Top Secret America</strong> של הוושינגטון פוסט נחשף ב-2010 וחשף את הממדים העצומים של תעשיית המודיעין והביטחון הלאומי בארה״ב לאחר פיגועי 11 בספטמבר. התחקיר חשף את הצמיחה המהירה של סוכנויות המודיעין הפרטיות ששגשגו כלכלית תוך כדי עבודה עם הממשל הפדרלי והוביל לחשיפת מערכות מתודולוגיות שנחשבו לאכזריות ובלתי מפוקחות. עם 850,000 אנשים מעורבים בתעשיית המודיעין ו-1,271 ארגונים שונים במדינה, התחקיר חשף את היקף הפעולה של עולם המודיעין והביטחון בארצות הברית והביא לכדי שיח עולמי על פרטיות, שקיפות ובקרה.</p></div></div></figure></div><div style="display:contents" dir="rtl"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2befda69-219f-80e1-aa60-c5650432ea74"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/book_orange.svg"/></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="2befda69-219f-80c4-a48c-e53d2fd019d5" class=""><strong>הפרויקט 1619</strong> של הניו יורק טיימס החל ב-2019 וחקר את ההיסטוריה של העבדות האפריקאית בארצות הברית והשפעתה על החברה והתרבות האמריקאית עד ימינו. שם הפרויקט מציין את השנה שבה הגיעו העבדים האפריקאיים הראשונים לאמריקה. מטרת הפרויקט הייתה לחשוף את העבר האפל של העבדות ולהציג כיתד העבדות והשפעתה חדרו לכל תחום בחברה האמריקאית, בין היתר לכלכלה, לפוליטיקה ולתרבות. התחקיר כלל כתבות, דעות, ויזואליה ותיעוד היסטורי, והפך לנושא מרכזי בשיח הציבורי בארצות הברית על גזע, דיכוי ותודעה ציבורית. הפרויקט עורר שיח רחב על הצורך להכיר במורשת השעבוד בכדי להבין את מרקמה של החברה האמריקאית כיום. בזאת, הפרויקט הביא לדיונים על תשלום פיצויים וגיבוש מדיניות ציבורית.</p></div></div></figure></div><div style="display:contents" dir="auto"><h3 id="2befda69-219f-8003-8ff8-eb68b81b7689" class="">מודל התחקיר המסובסד</h3></div><div style="display:contents" dir="auto"><p id="2befda69-219f-808e-8737-e90af1326a3c" class="">מודל התחקיר המסובסד מתווה תהליך סדור בהפסקת תחקירים במימון מתרומות ומקרנות פילנתרופיות. מימון מסוג זה מאפשר לעיתונאים לבצע עבודת תחקיר מעמיקה מבלי שהם נתונים ללחץ מסחרי או מבלי שהם תלויים בהכנסות מפרסום. כך, התחקירים לא נתונים להשפעות חיצוניות מכל סוג. העיתונאים מפתחים ויוצרים תכנים בצורה עצמאית וללא משוא פנים. המודל מעניק לעיתונאים זמן וכלים כדי לעסוק בנושאים חברתיים, פוליטיים וכלכליים חשובים, ומאפשר להם להתמקד בתחקירים ארוכים, מעמיקים ואיכותיים.</p></div><div style="display:contents" dir="rtl"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2befda69-219f-801a-954d-e4e48d691ddb"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/arrow-southwest_orange.svg"/></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="2befda69-219f-8091-8278-c65e9bd87d03" class=""><strong>דוגמה</strong><br/>פרופובליקה, ארגון עיתונאי שממומן מתרומות פילנתרופיות ומתמקד בתחקירים ארוכים שמנתחים נושאים מורכבים כמו אי-שוויון חברתי, פוליטיקה, כלכלה וזכויות אדם. תוצאות התחקירים של פרופובליקה מתפרסמות באתר האינטרנט שלו, ולעיתים גם בשיתוף פעולה עם עיתונים גדולים וכלי תקשורת מרכזיים. כך מתאפשרת חשיפה רחבה של ממצאים וההשפעה על השיח הציבורי והחקיקה מתחזקת.</p></div></div></figure></div><div style="display:contents" dir="auto"><h3 id="2befda69-219f-80cc-958d-e7e4f840bf60" class="">פרסום פרוגרמטי</h3></div><div style="display:contents" dir="auto"><p id="2befda69-219f-802a-9cdf-d6b053fb8840" class="">פרסום פרוגרמטי היא שיטה לפרסום דיגיטלי בה המודעות מותאמות באופן אוטומטי לכל משתמש ולקהל היעד המתאים לו ביותר בזמן אמת. תהליך זה מתנהל באמצעות מערכות שמקבלות החלטות בזמן אמת באשר למודעות שיוצגו לכל גולש/ת, ומבוססות על נתונים אודות ההתנהגות ו״טביעת האצבע״ הדיגיטלית של המשתמשות/ים, תחומי העניין והעדפותיהן/ם. כך, מותגים יכולים להגיע בצורה ממוקדת ומדויקת לקהלים רלוונטיים תוך כדי שהם מבצעים שינויים למודעות בזמן אמת להשגת תוצאות יעילות יותר.  </p></div><div style="display:contents" dir="rtl"><figure id="2befda69-219f-8070-bec9-dc2f7ba0092b" class="image"><a href="%D7%A9%D7%99%D7%A2%D7%95%D7%A8%203%20%E2%80%A2%20%D7%94%D7%97%D7%93%D7%A9%D7%95%D7%AA%20%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98/image.jpeg"><img style="width:710px" src="%D7%A9%D7%99%D7%A2%D7%95%D7%A8%203%20%E2%80%A2%20%D7%94%D7%97%D7%93%D7%A9%D7%95%D7%AA%20%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98/image.jpeg"/></a></figure></div><div style="display:contents" dir="auto"><p id="2befda69-219f-80bf-bd92-d922a573a99b" class=""><strong>תהליך הפרסום הפרוגרמטי</strong></p></div><div style="display:contents" dir="auto"><ol type="1" id="2befda69-219f-806c-ac32-d382beb2811a" class="numbered-list" start="1"><li>הגולש/ת מגיע/ה לאתר אינטרנט שבו מוצגת מודעה.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2befda69-219f-803f-9771-c4699402d815" class="numbered-list" start="2"><li>ברגע שהעמוד נטען, המידע אודות הגולש (כגון תחומי עניין, מיקום גיאוגרפי, היסטוריית חיפושים ועוד) מועבר למערכת הגשת הקמפיינים.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2befda69-219f-80be-8ebf-f0adbc458dd9" class="numbered-list" start="3"><li>המערכת מבצעת התאמה בין נתוני הגולש/ת לבין קמפיינים רלוונטיים שזמינים במערכת, ומבצע את ההימור על הקמפיין שמתאים ביותר להצגה לגולש/ת.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2befda69-219f-80a6-bb07-fa2a5d4c56ec" class="numbered-list" start="4"><li>הגולש/ת נחשפ/ת למודעה המתאימה לו ביותר בזמן אמת, בהתבסס על נתוניה/ו האישיים. כך גובר הסיכוי שהמודעה תעניין את הגולש/ת ותניע אותה/ו לפעולה.</li></ol></div><div style="display:contents" dir="auto"><h3 id="2befda69-219f-80a2-9e37-dbbffbd1656b" class="">מעיניו של העורך</h3></div><div style="display:contents" dir="auto"><p id="2befda69-219f-800e-b476-d359c1176a0b" class=""><strong>נתוני מעורבות גולשים בזמן אמת</strong></p></div><div style="display:contents" dir="auto"><p id="2befda69-219f-80e2-8868-eb8abe00de22" class="">לוח המחוונים שמופיע בפני עורכות החדשות מציג תמונת מצב מקיפה וקלת גישה בזמן אמת של ביצועי האתר. הלוח מציג את מספר המבקרים הכולל, כמו גם את מספרם על פני זמן במטרה לאפשר זיהוי מגמות וניתוח תנועה באתר. הפילוח לפי מקורות הפניות מציג מאילו אתרים מגיעות המבקרות ובכך מאפשר לעורכת להעריך את היעילות של הקמפיינים או של ההפניות החיצוניות. בנוסף, הלוח מציג את הידיעות המובילות – כך העורכת מבינה אילו נושאים מושכים את תשומת הלב הרבה ביותר. כמו כן, מופיעים נתונים על מבקרות רדומות – גולשות שביקורן נפסק באתר, וגולשות פעילות, מתוך הניסיון להעריך ולהבין את מידת מעורבות המשתמשות ובגיבוש אסטרטגיה להחזרת גולשות רדומות ולשימור גולשות פעילות.  </p></div><div style="display:contents" dir="rtl"><figure id="2befda69-219f-802a-a205-cfe477634c7d" class="image"><a href="%D7%A9%D7%99%D7%A2%D7%95%D7%A8%203%20%E2%80%A2%20%D7%94%D7%97%D7%93%D7%A9%D7%95%D7%AA%20%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98/image%202.png"><img style="width:709.984375px" src="%D7%A9%D7%99%D7%A2%D7%95%D7%A8%203%20%E2%80%A2%20%D7%94%D7%97%D7%93%D7%A9%D7%95%D7%AA%20%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98/image%202.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="2befda69-219f-807a-9c7b-c719a098b077" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2befda69-219f-80b0-aa6b-fea4eb8cb52a" class=""><strong>בדיקות A/B</strong></p></div><div style="display:contents" dir="auto"><p id="2befda69-219f-80ac-a5b5-fda65d9b219a" class="">בדיקות A/B הן כלי חשוב בעיתונאות הדיגיטלית, במיוחד כשמדובר בניתוח ביצועים של טיזרים, כמו כותרות וכותרות משנה. מטרת הכלי היא להשוות בין גרסאות שונות של תוכן בכדי לזהות איזו גרסה משיגה את היעדים באופן מוצלח יותר, על פי מדדים כמו שיעור הקלקות (CTR), משך שהות בעמוד או שיעור המעורבות של הגולשים.</p></div><div style="display:contents" dir="rtl"><figure id="2befda69-219f-80f9-bec3-d9b9f98d600c" class="image"><a href="%D7%A9%D7%99%D7%A2%D7%95%D7%A8%203%20%E2%80%A2%20%D7%94%D7%97%D7%93%D7%A9%D7%95%D7%AA%20%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98/image%203.png"><img style="width:709.984375px" src="%D7%A9%D7%99%D7%A2%D7%95%D7%A8%203%20%E2%80%A2%20%D7%94%D7%97%D7%93%D7%A9%D7%95%D7%AA%20%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98/image%203.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="2befda69-219f-80b8-a983-fd30bdaecd8c" class="">במקרה של כותרות וכותרות משנה, עורכת או מנהלת התוכן יוצרת שתי גרסאות שונות של טיזר לאותה ידיעה, כאשר כל גרסה שונה בפרטים מסוימים – לדוגמה, נוסח הכותרת, שימוש במילים חזקות או מבנה הידיעה בכותרת. המטרה היא לבדוק איזו כותרת או כותרת משנה גורמת ליותר גולשות ללחוץ על הידיעה ולהיכנס לקרוא את התוכן המלא.  </p></div><div style="display:contents" dir="auto"><p id="2befda69-219f-804d-8999-fc0e65375fdf" class=""><strong>תהליך בדיקות A/B</strong></p></div><div style="display:contents" dir="auto"><ol type="1" id="2befda69-219f-804a-bec9-ce9ad025a6c6" class="numbered-list" start="1"><li>יצירת שתי גרסאות שונות של הכותרת או של כותרת המשנה.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2befda69-219f-80dc-8b5b-e8ee544ef861" class="numbered-list" start="2"><li>חלוקה אוטומטית של הגולשים לשתי קבוצות, כאשר כל קבוצה נחשפת לגרסה שונה.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2befda69-219f-80a5-8cd5-ea333c1c77ac" class="numbered-list" start="3"><li>איסוף נתונים במהלך התקופה בה מתנהלת הבדיקה, כמו שיעור הקלקות, זמן שהות בעמוד, אינטראקציה עם התוכן ועוד.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2befda69-219f-8062-89ec-f1241b0673e6" class="numbered-list" start="4"><li>ניתוח תוצאות הבדיקה ובחירת הגרסה שהביאה לתוצאות הטובות ביותר.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2befda69-219f-8004-a9e3-d8f00bb31a3f" class="numbered-list" start="5"><li>השימוש ב-A/B Testing מאפשר לעורכות להבין אילו כותרות, מסרים ושיטות פנייה עובדים בצורה הטובה ביותר עם קהלי היעד ומשפר את יכולת האתר למשוך גולשות ולהגדיל את המעורבות בתוכן.  </li></ol></div><div style="display:contents" dir="auto"><h3 id="2befda69-219f-8002-8e36-ecafb5e08e43" class="">סוף עידן ההפניות</h3></div><div style="display:contents" dir="auto"><p id="2befda69-219f-801a-abf6-c31393816ea6" class="">אתרי חדשות מסתמכים פחות ופחות על תנועת גולשים מהפניות חיצוניות, בעיקר מרשתות חברתיות ומנועי חיפוש. שינויים באלגוריתמים שבפלטפורמות כמו פייסבוק צמצמו משמעותית את החשיפה לידיעות חדשותיות בפיד, מה שהוביל לירידה חדה בתנועת הגולשים מאתר כמו אלה.</p></div><div style="display:contents" dir="auto"><p id="2befda69-219f-80a7-985f-d6a05d43afa8" class="">במקביל, גוגל מספקת תשובות ישירות בתוצאות החיפוש, מה שמפחית את הצורך של המשתמשים להיכנס לאתרים חיצוניים על מנת לקבל מידע. כתוצאה מכך, אתרי החדשות מחפשים אסטרטגיות חדשות למשיכת קהלים כאשר ההשקעה העיקרית היא בטיפוח תנועה ישירה. בין האמצעים הבולטים ניתן למנות השקעה באפליקציות ייעודיות, שליחת ניוזלטרים ממוקדים ופיתוח מועדוני מנויים המציעים תוכן בלעדי.</p></div><div style="display:contents" dir="rtl"><figure id="2befda69-219f-80bd-ba5e-d6de5f2350b2" class="image"><a href="%D7%A9%D7%99%D7%A2%D7%95%D7%A8%203%20%E2%80%A2%20%D7%94%D7%97%D7%93%D7%A9%D7%95%D7%AA%20%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98/image%204.png"><img style="width:920px" src="%D7%A9%D7%99%D7%A2%D7%95%D7%A8%203%20%E2%80%A2%20%D7%94%D7%97%D7%93%D7%A9%D7%95%D7%AA%20%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98/image%204.png"/></a><figcaption>לפי מכון רויטרס לחקר עיתונות, 74% מראשי המדיה שהשתתפו בסקר הטרנדים והטכנולוגיות השנתי מדווחים על דאגה גוברת בנוגע לדעיכה בהפניות לאתרי החדשות ממנועי חיפוש. מגמה זו, לצד ירידה של 67% בתנועת גולשים המגיעה מפייסבוק בתוך שנתיים בלבד, מצביעה על שינוי דרמטי באופן שבו צרכני חדשות מגיעים לתוכן עיתונאי.  </figcaption></figure></div><div style="display:contents" dir="auto"><p id="2befda69-219f-80bf-8608-ce9ba0779568" class="">מגמה זו משתלבת עם הדגש ההולך וגובר על מנויים ותוכן פרימיום המאפשרים לאתרי החדשות להפחית את התלות בהכנסות מפרסום.  בנוסף, אתרי החדשות מתמודדים עם תחרות גוברת מצד פלטפורמות כמו טיקטוק ויוטיוב שהפכו למקורות מידע עיקריים עבור דור צעיר המעדיף לצרוך את החדשות באמצעות ווידאו קצר ואלגוריתם מותאם אישית. השינוי מאלץ את התעשייה להסתגל ולהציע חוויות חדשות שיתאימו להרגלי הצריכה המשתנים של הקוראים.  </p></div><div style="display:contents" dir="auto"><h1 id="2befda69-219f-8039-9bb9-c0e3da8a459a" class="">סיכום</h1></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-8031-9a8c-f8194956eedb" class="bulleted-list"><li style="list-style-type:disc">החדשות באינטרנט התפתחו בארבעה עידנים ובהם המעבר מאופטימיות להתמודדות עם אתגרי הפלטפורמות והפופוליזם.</li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-804e-8201-d1f529b676d2" class="bulleted-list"><li style="list-style-type:disc">קיים פרדוקס בין הפוטנציאל הטכנולוגי העצום של המדיה הדיגיטלית לבין השמרנות בפועל של רוב התכנים המקוונים.</li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-80a1-87fb-ec804544cf3c" class="bulleted-list"><li style="list-style-type:disc">החדשנות בעיתונות מתבטאת בסוגים חדשים של עיתונות, מגמות וטכנולוגיות חדשות המשנות את איסוף וצריכת החדשות.</li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-80fc-a84b-c6be25d242f3" class="bulleted-list"><li style="list-style-type:disc">התחקיר העיתונאי חווה לידה מחודשת במרחב הדיגיטלי דרך ארגונים בינ״ל, שיתופי פעולה חוצי גבולות ומודלים מסובסדים.</li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-808b-9ba4-ff63383b1070" class="bulleted-list"><li style="list-style-type:disc">צוואר הבקבוק הכלכלי מתבטא בהכנסות נמוכות, שליטת ענקיות הטכנולוגיה בפרסום ושימוש בחוסמי פרסומות.</li></ul></div><div style="display:contents" dir="auto"><ul id="2befda69-219f-803b-8869-c7969ba7f34e" class="bulleted-list"><li style="list-style-type:disc">הדאטהפיקציה של צריכת החדשות הופכת את פעילות הגולשים לנתונים כמותיים המשפיעים על החלטות עריכה ותוכן.  </li></ul></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
