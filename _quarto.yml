@@ -1,0 +1,26 @@
+project:
+  type: book
+
+book:
+  title: "מפת התקשורת בישראל ובעולם: מהדורה דיגיטלית"
+  author: "בר פישמן"
+  date: "12/4/2025"
+  language: he
+  chapters:
+    - index.qmd
+    - unit3.md
+
+format:
+  html:
+    css: styles.css
+    toc: true
+    favicon: bgu-favicon.ico
+    logo: bgu-logo.png
+    includes:
+      in-header: custom.js
+
+  pdf:
+    documentclass: scrreprt
+    
+extensions:
+  - _extensions/he.js
